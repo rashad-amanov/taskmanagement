@@ -10,6 +10,7 @@
     <form id="form1" runat="server">
         <div>
             <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+            <asp:Localize ID="Localize1" runat="server"></asp:Localize>
         </div>
     </form>
 </body>
