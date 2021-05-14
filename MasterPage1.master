@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" %>
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta charset="utf-8" />    
+    <title>  
+       
+    </title>
+    <asp:ContentPlaceHolder id="head" runat="server" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /> 
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div style="width:1000px; height:50px; background-color: #FF99FF;">
+        </div>
+        <div style="width:200px; height:500px; background-color:#FFCCCC; float:left; font-family: 'MV Boli';">
+                
+                    <a href="#"><i style="width:25px; height: 25px;" class="fab fa-battle-net"></i>Layiheler </a><br />
+                    <br />
+                    <a href="#"><i style="width:25px; height: 25px;" class="fas fa-tasks"></i>Tapsiriqlar</a><br />
+                    <br />
+                    <a href="#"><i  style="width:25px; height: 25px;"class="fas fa-sign-out-alt"></i>Cixis</a>
+                      
+        </div>
+    <div style="width:800px; height:500px; float:left; background-color: #FFFFCC;">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server" />
+    </div>
+    </form>
+</body>
+</html>
