@@ -28,5 +28,15 @@ namespace TaskManagement
 
             SqlDataSourceMain.Insert();
         }
+
+        protected void GridViewUsers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void SqlDataSourceMain_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+        {
+
+        }
     }
 }

@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:GridView ID="GridViewUsers" runat="server" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlDataSourceMain" AllowSorting="True" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" ShowFooter="True">
+    <asp:GridView ID="GridViewUsers" runat="server" AutoGenerateColumns="False" DataKeyNames="ID"  DataSourceID="SqlDataSourceMain" AllowSorting="True" HorizontalAlign="Center" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="20" GridLines="Vertical" ShowFooter="True" style="margin-top: 5%" OnSelectedIndexChanged="GridViewUsers_SelectedIndexChanged" ShowHeaderWhenEmpty="True">
         <AlternatingRowStyle BackColor="#DCDCDC" />
     <Columns>
         <asp:TemplateField ShowHeader="False">
@@ -78,8 +78,9 @@
         <SortedAscendingHeaderStyle BackColor="#0000A9" />
         <SortedDescendingCellStyle BackColor="#CAC9C9" />
         <SortedDescendingHeaderStyle BackColor="#000065" />
+        <EmptyDataTemplate>İstifadəçi yoxdur</EmptyDataTemplate>
 </asp:GridView>
-<asp:SqlDataSource ID="SqlDataSourceMain" runat="server" ConnectionString="<%$ ConnectionStrings:DBConnectionString %>" DeleteCommand="DELETE FROM [Users] WHERE [ID] = @ID" InsertCommand="INSERT INTO [Users] ([UserName], [UserPassword], [UserMail], [UserRole]) VALUES (@UserName, @UserPassword, @UserMail, @UserRole)" SelectCommand="SELECT * FROM [Users]" UpdateCommand="UPDATE [Users] SET [UserName] = @UserName, [UserPassword] = @UserPassword, [UserMail] = @UserMail, [UserRole] = @UserRole WHERE [ID] = @ID">
+<asp:SqlDataSource ID="SqlDataSourceMain" runat="server" ConnectionString="<%$ ConnectionStrings:DBConnectionString %>" DeleteCommand="DELETE FROM [Users] WHERE [ID] = @ID" InsertCommand="INSERT INTO [Users] ([UserName], [UserPassword], [UserMail], [UserRole]) VALUES (@UserName, @UserPassword, @UserMail, @UserRole)" SelectCommand="SELECT * FROM [Users]" UpdateCommand="UPDATE [Users] SET [UserName] = @UserName, [UserPassword] = @UserPassword, [UserMail] = @UserMail, [UserRole] = @UserRole WHERE [ID] = @ID" OnSelecting="SqlDataSourceMain_Selecting">
     <DeleteParameters>
         <asp:Parameter Name="ID" Type="Int32" />
     </DeleteParameters>
